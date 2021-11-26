@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
+import {} from 'googlemaps';
+import { Loader } from "@googlemaps/js-api-loader"
 
 @Component({
   selector: 'app-map',
@@ -23,6 +25,21 @@ export class MapComponent implements OnInit {
     });
 
     tiles.addTo(map);
+
+    // const loader = new Loader({
+    //   apiKey: "AIzaSyDcwGyRxRbcNGWOFQVT87A1mkxEOfm8t0w",
+    //   version: "weekly"
+    // });
+    //
+    // let map;
+    // loader.load().then(() => {
+    //   map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
+    //     center: { lat: -34.397, lng: 150.644 },
+    //     zoom: 8,
+    //   });
+    // }).catch(e => {
+    //   console.log(e);
+    // });
   }
 
 }

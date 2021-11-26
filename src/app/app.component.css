@@ -12,3 +12,33 @@
   overflow: hidden;
 }
 
+.container {
+  width: 40%;
+  height: 200px;
+  overflow: auto;
+}
+
+/*.a1 {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background: aqua;
+}
+
+.row-item {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title, .right-icon {
+  padding: 16px;
+}
+
+.divider-bar {
+  border-top: 1px solid black;
+  height: 1px;
+  width: 100%;
+}*/
+
