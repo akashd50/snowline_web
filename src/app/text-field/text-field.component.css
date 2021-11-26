@@ -1,0 +1,41 @@
+.container {
+  width: 80%;
+  padding: 8px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: antiquewhite;
+}
+
+.field-title {
+  font-weight: 600;
+  font-size: small;
+  margin-left: 4px;
+}
+
+.all-around-border {
+  border: 2px dashed darkgrey;
+  border-bottom: none;
+  border-radius: 5px;
+}
+
+.divider {
+  border-top: 1px dashed darkgrey;
+  height: 1px;
+  margin-left: 2px;
+}
+
+.input-style {
+  width: 100%;
+  height: 32px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid darkgrey;
+  background: antiquewhite;
+  margin-top: -12px;
+  font-weight: 400;
+  font-size: large;
+}
+
+.input-style:hover {
+  border-bottom: 2px solid darkgrey;
+}

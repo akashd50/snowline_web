@@ -10,6 +10,8 @@ import {FlexModule} from "@angular/flex-layout";
 import { RouteListItemComponent } from './route-list-item/route-list-item.component';
 import {HttpRequestService} from "./services/HttpRequestService";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { TextFieldComponent } from './text-field/text-field.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     MapComponent,
     HeaderBarComponent,
     RouteListItemComponent,
+    TextFieldComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
     FlexModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [HttpRequestService, HttpClient],
   bootstrap: [AppComponent]
