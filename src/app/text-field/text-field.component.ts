@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from "@angular/forms";
 
 @Component({
@@ -7,6 +7,8 @@ import {FormControl} from "@angular/forms";
   styleUrls: ['./text-field.component.css']
 })
 export class TextFieldComponent implements OnInit {
+  @Input() title: string;
+
   inputFormControl: FormControl;
   constructor() { }
 
