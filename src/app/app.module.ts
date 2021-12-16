@@ -8,7 +8,7 @@ import { MapComponent } from './map/map.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import {FlexModule} from "@angular/flex-layout";
 import { RouteListItemComponent } from './route-list-item/route-list-item.component';
-import {HttpRequestService} from "./services/HttpRequestService";
+import {HttpRequestService} from "./services/http-request-service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { TextFieldComponent } from './text-field/text-field.component';
 import {ReactiveFormsModule} from "@angular/forms";

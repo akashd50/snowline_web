@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpRequestService} from '../services/HttpRequestService'
-import {newStopsRequest, RequestType, StopsRequest} from "../services/Request";
+import { Component, OnInit } from '@angular/core';
+import { HttpRequestService } from '../services/http-request-service'
+import { newStopsRequest } from "../services/request";
 
 @Component({
   selector: 'app-route-list-item',
@@ -14,7 +14,9 @@ export class RouteListItemComponent implements OnInit {
   ngOnInit(): void {
     const request = newStopsRequest();
     request.stopId = "10064";
-    this.requestService.getResponse(request);
+    this.requestService.getResponse(request).subscribe(response => {
+        console.log(response);
+    });
   }
 
 }
