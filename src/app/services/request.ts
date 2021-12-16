@@ -40,22 +40,24 @@ export function createNewRequest<Type>(requestType: RequestType): Type {
 }
 
 export function getUrl(request: Request): string {
-    if (request.requestType == RequestType.Stops) {
-        const stopRequest = request as StopsRequest;
-        const params = paramsMap[stopRequest.requestType];
-        let url = API_URL + requestTypeToUrl[stopRequest.requestType] + "/";
-        if (stopRequest.stopId) {
-            url += stopRequest.stopId;
-        }
-        url += ".json";
-        url += "?api-key=OrN9z8x8KwWXb5o39hoD";
+    const params = paramsMap[request.requestType];
+    let url = API_URL + requestTypeToUrl[request.requestType] + "/";
 
-        params.forEach(p => {
-            if (stopRequest[p]) {
-                url += "&";
-                url += p + "=" + stopRequest[p];
+    switch (request.requestType) {
+        case RequestType.Stops:
+            const stopRequest = request as StopsRequest;
+            if (stopRequest.stopId) {
+                url += stopRequest.stopId;
             }
-        });
-        return url;
+            url += ".json";
+            url += "?api-key=OrN9z8x8KwWXb5o39hoD";
+
+            params.forEach(p => {
+                if (stopRequest[p]) {
+                    url += "&";
+                    url += p + "=" + stopRequest[p];
+                }
+            });
+            return url;
     }
 }
